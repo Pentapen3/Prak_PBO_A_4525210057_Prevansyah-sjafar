@@ -21,37 +21,37 @@ enum TipeBahanBakar: string
     case Bensin  = 'bensin';
     case Solar   = 'solar';
     // TODO 1 (Langkah 2): tambahkan case Listrik = 'listrik';
-    case Listrik ='listrik';
+    case Listrik = 'listrik';
     /** TODO 2: kembalikan label yang enak dibaca. Petunjuk: match ($this) { ... } */
     public function label(): string
     {
-        return match ($this){
-            self::Bensin  => 'Bensin',
-            self::Solar   => 'Solar',
+        return match ($this ) {
+            self::Bensin => 'Bensin',
+            self::Solar => 'Solar',
             self::Listrik => 'Listrik',
-        };// ganti
+        };   // ganti
     }
 
     /** TODO 3: Bensin 12000 · Solar 10500 · Listrik 2500 */
     public function hargaPerSatuan(): float
     {
-        return match ($this){
-            self::Bensin  => 12000,
-            self::Solar   => 10500,
+        return match ($this) {
+            self::Bensin => 12000,
+            self::Solar => 10500,
             self::Listrik => 2500,
-        };
+        };   // ganti
     }
 
     /** TODO 4 */
     public function biayaPengisian(float $jumlah): float
     {
-        return $jumlah * $this ->hargaPerSatuan();
+        return $jumlah * $this-> hargaPerSatuan();   // ganti
     }
 
     /** TODO 5: hanya Listrik yang ramah lingkungan. */
     public function ramahLingkungan(): bool
     {
-        return $this === self::Listrik; 
+        return $this === self::Listrik;   // ganti
     }
 }
 
@@ -66,7 +66,7 @@ trait Loggable
      */
     public function log(string $pesan): void
     {
-        printf("[%s] %s : %s \n", date('H:i:s'), static::class, $pesan);
+        printf("[%s] %s: %s\n" , date('H:i:s'), static::class, $pesan);// TODO 6
     }
 }
 
@@ -106,28 +106,24 @@ final class Mobil extends Kendaraan implements Movable, Fuelable
     public function jumlahRoda(): int { return 4; }
 
     // TODO 8: lengkapi kontrak Movable dan Fuelable.
-    public function bergerak(): void 
-    {
-        echo "($this ->merek) melaju dijalan raya";
+    public function bergerak(): void {
+        echo "{$this->merek} melaju di jalan raya\n";
     }
-    public function kecepatanMaksimum(): float
-    { 
-        return 180; 
+
+    public function kecepatanMaksimum(): float { 
+        return 180;
     }
-    public function isiBahanBakar(float $jumlah): void 
-    {
-        if ($this<= 0)
-        {
-            throw new InvalidArgumentException('Jumlah bahan bakar harus lebih dari 0');
+    public function isiBahanBakar(float $jumlah): void {
+        if ($jumlah <=0) {
+            throw new InvalidArgumentException('jumlah bahan bakar harus lebih dari 0');
         }
-        
-        if ($this->isiTangki + $jumlah > $this ->kapasitas)
-        {
+
+        if ($this->isiTangki + $jumlah > $this-> kapasitas) {
             throw new InvalidArgumentException('pengisian melebihi kapasitas tangki');
         }
-        
-        $this ->isiTangki +=$jumlah;
+        $this->isiTangki += $jumlah;
     }
+
 
     public function kapasitasTangki(): float { return $this->kapasitas; }
     public function tipeBahanBakar(): TipeBahanBakar { return TipeBahanBakar::Bensin; }
@@ -142,16 +138,16 @@ final class Sepeda extends Kendaraan implements Movable
     {
         return 2;
     }
-    
+
     public function bergerak(): void
     {
-        echo "($this->merek )mengayuh di jalan\n";
+        echo "{$this->merek} mengayuh di jalan\n";
     }
-    
-   
+
+    #[Override]
     public function kecepatanMaksimum(): float
     {
-        return 40;
+       return 40;
     }
 }
 /**
@@ -159,7 +155,8 @@ final class Sepeda extends Kendaraan implements Movable
  * Kelas ini sama sekali bukan kerabat Kendaraan — itulah maksud
  * "penggunaan ulang horizontal".
  */
-final class Pesanan 
+
+final class pesanan
 {
     use Loggable;
 }
