@@ -37,7 +37,7 @@
 > Program uji yang membuat tiga rekening (dua dengan constructor lengkap, satu dengan constructor ringkas), lalu menampilkan jumlah rekening yang harus 3 (bukan 4). Program kemudian menguji setoran, penarikan yang melebihi batas (harus ditolak), pemotongan biaya admin pada saldo 0 (saldo tidak boleh negatif), dan perhitungan bunga setahun lewat method statis.
 
 **Bukti Eksekusi (Screenshot):**
-* Tidak ada perubahan kode pada file ini (program uji). Bukti eksekusi sebelum dan sesudah ada pada bagian **Output** di bawah.
+* Tidak ada perubahan kode pada file ini 
 
 ### Output
 **Output Program:**
@@ -76,7 +76,7 @@
 > Program uji PHP yang setara dengan `Main.java`. Rekening Budi dibuat lewat named constructor `RekeningBank::rekeningPelajar()`, sedangkan Ani dan Citra lewat `new`. Alur pengujiannya sama: cek jumlah rekening, setor, tarik melebihi batas dalam blok `try ... catch`, potong biaya admin, dan hitung bunga setahun.
 
 **Bukti Eksekusi (Screenshot):**
-* Tidak ada perubahan kode pada file ini (program uji). Bukti eksekusi sebelum dan sesudah ada pada bagian **Output** di bawah.
+* Tidak ada perubahan kode pada file ini
 
 ### Output
 **Output Program:**
