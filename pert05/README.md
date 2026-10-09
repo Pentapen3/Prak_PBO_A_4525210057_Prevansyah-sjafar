@@ -8,7 +8,7 @@
 | **Mata Kuliah** | Pemrograman Berbasis Objek (PBO) |
 | **Pertemuan** |05 - Polimerfisme|
 | **Tanggal** | *Kamis 1 Oktober 2026* |
-| **Dosen Pengampu** | *Adi Wahyu Pribadi, S.Si., M.Kom	* |
+| **Dosen Pengampu** | *Adi Wahyu Pribadi, S.Si., M.Kom* |
 
 ---
 
@@ -18,8 +18,6 @@
 **Penjelasan Kode:**
 > Kelas induk `abstract` yang menetapkan kontrak: setiap bangun datar wajib punya `luas()` dan `keliling()`. Method `toString()` berada di induk tetapi memanggil `luas()` dan `keliling()` yang isinya baru ada di turunan. Hal ini bisa terjadi karena dynamic dispatch: Java memilih method sesuai jenis objek sebenarnya saat program berjalan.
 
-**Bukti Eksekusi (Screenshot):**
-* Tidak ada screenshot terpisah untuk file ini. Hasil eksekusinya terlihat pada bagian **Output** di bawah.
 
 ### 1.2. File: `Lingkaran.java`
 **Penjelasan Kode:**
@@ -56,14 +54,17 @@
 > Bangun datar baru yang ditambahkan pada langkah 2 tanpa mengubah logika perulangan di `Main`. Menyimpan `alas`, `tinggi`, dan `sisiMiring`. `luas()` memakai `0.5 * alas * tinggi` dan `keliling()` menjumlahkan ketiga sisi. `toString()` di-override untuk menampilkan ukuran segitiga.
 
 **Bukti Eksekusi (Screenshot):**
-* File ini dibuat baru sehingga tidak ada kondisi before. Hasilnya terlihat pada bagian **Output** di bawah (Segitiga luas = 6,0).
+* File ini dibuat baru sehingga tidak ada kondisi before. Hasilnya terlihat pada bagian 
+
+![SS After segitiga.java](../img/after/pert5/segitigajava.png)
 
 ### 1.5. File: `Trapesium.java`
 **Penjelasan Kode:**
 > Bangun datar keempat yang ditambahkan pada langkah 4. Menyimpan sisi atas, sisi bawah, tinggi, sisi kiri, dan sisi kanan. `luas()` memakai `0.5 * (atas + bawah) * tinggi` dan `keliling()` menjumlahkan keempat sisi. Seperti `Segitiga`, class ini cukup ditambahkan ke array di `Main` tanpa mengubah kode lain.
 
 **Bukti Eksekusi (Screenshot):**
-* File ini dibuat baru sehingga tidak ada kondisi before. Hasilnya terlihat pada bagian **Output** di bawah (Trapesium luas = 40,0 dengan tinggi 5).
+* File ini dibuat baru sehingga tidak ada kondisi before. Hasilnya terlihat pada bagian 
+![SS After trapesium.java](../img/after/pert5/trapesiumjava.png)
 
 ### 1.6. File: `Main.java`
 **Penjelasan Kode:**
@@ -84,8 +85,6 @@
 **Penjelasan Kode:**
 > `AntiPattern.java` adalah versi tanpa polimorfisme: satu method `hitungLuas(Object)` berisi rangkaian `if ... instanceof`, sehingga setiap bangun baru memaksa method itu disunting dan satu cabang yang terlupa akan memicu exception. `AntiPatternRefaktor.java` memperbaikinya dengan `interface Bangun` yang punya `luas()`, dan tiap `record` mengimplementasikannya sendiri. Pengetahuan cara menghitung luas kini berada di tiap bangun, bukan di method pusat.
 
-**Bukti Eksekusi (Screenshot):**
-* Tidak ada screenshot terpisah untuk file ini (latihan refaktor). Hasil eksekusinya terlihat pada bagian **Output** di bawah.
 
 ### Output
 **Output Program:**
@@ -152,12 +151,12 @@
 **Output Program:**
 ![Output PHP](../img/after/pert5/outputphp.png)
 
-*Setelah dilengkapi, hasil muncul dua kali. Blok pertama berasal dari driver code di `BangunDatar.php` (Persegi sisi 4), blok kedua dari `main.php`. Total luas dari `main.php` adalah 216,94 dan Trapesium (10, 6, 5, 5, 4) berluas 32,00.*
+
 
 **Pembanding, output sebelum kode dilengkapi:**
 ![Output PHP sebelum](../img/befor/pert5/outputphp.png)
 
-*Sebelum dilengkapi, luas dan keliling bernilai 0.00 dan total luas 0.00.*
+
 
 ---
 

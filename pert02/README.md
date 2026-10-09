@@ -8,7 +8,7 @@
 | **Mata Kuliah** | Pemrograman Berbasis Objek (PBO) |
 | **Pertemuan** | 02 - Kelas, Objek, dan Enkapsulasi |
 | **Tanggal** | *Kamis 10 September 2026* |
-| **Dosen Pengampu** | *Adi Wahyu Pribadi, S.Si., M.Kom	* |
+| **Dosen Pengampu** | *Adi Wahyu Pribadi, S.Si., M.Kom* |
 ---
 
 ## 1. Implementasi Java
@@ -30,23 +30,17 @@
 
 *Seluruh TODO sudah dilengkapi: atribut `final`, validasi di constructor, method `pastikanNilaiSah()`, perhitungan nilai akhir, dan huruf mutu.*
 
-### 1.2. File: `Main.java`
-**Penjelasan Kode:**
-> Program uji yang membuat tiga objek `Mahasiswa` dan mencetak rekap nilainya lewat `toString()`. Setelah itu dua objek dengan data tidak sah dicoba dibuat: nilai tugas 150 dan NIM kosong. Keduanya harus ditolak dengan `IllegalArgumentException`, dan pesan kesalahannya dicetak. Jika objek berhasil dibuat, program mencetak "MASALAH" yang menandakan validasi belum bekerja.
-
-**Bukti Eksekusi (Screenshot):**
-* Tidak ada perubahan kode pada file ini (program uji). Bukti eksekusi sebelum dan sesudah ada pada bagian **Output** di bawah.
 
 ### Output
 **Output Program:**
 ![Output Java](../img/after/pert2/outputjava.png)
 
-*Setelah dilengkapi, nilai akhir terhitung benar (Ani 84,90 mutu A; Budi 59,30 mutu D; Citra 92,00 mutu A), nilai 150 dan NIM kosong ditolak dengan pesan yang jelas.*
+ 
 
 **Pembanding, output sebelum kode dilengkapi:**
 ![Output Java sebelum](../img/befor/pert2/outputjava.png)
 
-*Sebelum kode dilengkapi, nilai akhir semua mahasiswa 0,00 dengan mutu "?", dan data tidak sah tidak ditolak (muncul pesan MASALAH).*
+ 
 
 ---
 
@@ -68,12 +62,7 @@
 
 *Validasi, `nilaiAkhir()`, dan `hurufMutu()` dengan `match` sudah lengkap.*
 
-### 2.2. File: `main.php`
-**Penjelasan Kode:**
-> Program uji PHP yang setara dengan `Main.java`. File ini memuat `Mahasiswa.php` dengan `require_once`, mencetak rekap tiga mahasiswa, lalu menguji dua data tidak sah (nilai 150 dan NIM kosong) di dalam blok `try ... catch (InvalidArgumentException)`.
 
-**Bukti Eksekusi (Screenshot):**
-* Tidak ada perubahan kode pada file ini (program uji). Bukti eksekusi sebelum dan sesudah ada pada bagian **Output** di bawah.
 
 ### Output
 **Output Program:**

@@ -8,7 +8,7 @@
 | **Mata Kuliah** | Pemrograman Berbasis Objek (PBO) |
 | **Pertemuan** | 03 - Construktor, Anggota Statis, dan Konstanta |
 | **Tanggal** | *Kamis 17 September 2026* |
-| **Dosen Pengampu** | *Adi Wahyu Pribadi, S.Si., M.Kom	* |
+| **Dosen Pengampu** | *Adi Wahyu Pribadi, S.Si., M.Kom* |
 
 ---
 

@@ -34,7 +34,7 @@
 > Interface kontrak "bisa diisi bahan bakar" dengan `isiBahanBakar()`, `kapasitasTangki()`, dan `tipeBahanBakar()`. Sengaja dipisah dari `Movable` sesuai Interface Segregation Principle: tidak semua yang bergerak butuh bahan bakar (sepeda), dan tidak semua yang butuh bahan bakar bergerak (generator).
 
 **Bukti Eksekusi (Screenshot):**
-* Tidak ada perubahan kode pada file ini (sudah lengkap dari awal) dan tidak ada screenshot terpisah.
+* Tidak ada perubahan kode pada file ini 
 
 ### 1.3. File: `Kendaraan.java`
 **Penjelasan Kode:**

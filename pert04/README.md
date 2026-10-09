@@ -8,7 +8,7 @@
 | **Mata Kuliah** | Pemrograman Berbasis Objek (PBO) |
 | **Pertemuan** |04 - Inheritance |
 | **Tanggal** | *Kamis 24 September 2026* |
-| **Dosen Pengampu** | *Adi Wahyu Pribadi, S.Si., M.Kom	* |
+| **Dosen Pengampu** | *Adi Wahyu Pribadi, S.Si., M.Kom* |
 
 ---
 
