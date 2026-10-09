@@ -20,11 +20,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Pegawai.java](../img/befor/pert4/pegawaijava.png)
 
 *Kondisi awal masih TODO: validasi gaji negatif belum ada dan `hitungGaji()` masih placeholder (`return 0`), sehingga seluruh gaji tercetak Rp0,00.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Pegawai.java](../img/after/pert4/pegawaijava.png)
 
 *Validasi gaji negatif dan `hitungGaji()` yang mengembalikan `gajiPokok` sudah dilengkapi.*
@@ -35,11 +37,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before PegawaiTetap.java](../img/befor/pert4/pegawaitetapjava.png)
 
 *Kondisi awal: `hitungGaji()` masih `return 0` sehingga tunjangan belum dihitung.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After PegawaiTetap.java](../img/after/pert4/pegawaitetapjava.png)
 
 *`hitungGaji()` sudah memanggil `super.hitungGaji()` dan menambahkan tunjangan masa kerja dengan batas 40%.*
@@ -50,11 +54,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before PegawaiKontrak.java](../img/befor/pert4/pegawaikontrakjava.png)
 
 *Kondisi awal berisi catatan TODO yang meminta mempertimbangkan apakah `hitungGaji()` perlu di-override.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After PegawaiKontrak.java](../img/after/pert4/pegawaikontrak.png)
 
 *Keputusan akhir: tidak di-override karena perilaku induk sudah sesuai.*
@@ -65,22 +71,26 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Main.java](../img/befor/pert4/mainjava.png)
 
 *Kondisi awal: daftar pegawai dan perhitungan total masih berupa TODO.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Main.java](../img/after/pert4/mainjava.png)
 
 *Perulangan penjumlahan total gaji sudah ditulis sehingga total beban gaji tercetak.*
 
 ### Output
 **Output Program:**
+
 ![Output Java](../img/after/pert4/outputjava.png)
 
 *Setelah dilengkapi, Ani menerima Rp7.800.000,00 sesuai tulisan "Periksa", Budi Rp5.000.000,00, dan total beban gaji Rp12.800.000,00.*
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output Java sebelum](../img/befor/pert4/outputjava.png)
 
 *Sebelum dilengkapi, gaji semua pegawai Rp0,00 dan total Rp0,00.*
@@ -96,11 +106,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Galat logika)*:
+
 ![SS Before Pegawai.php](../img/befor/pert4/pegawaiphp.png)
 
 *Kondisi awal masih kerangka TODO: validasi belum ada, `hitungGaji()` belum benar, dan kelas Dosen serta PegawaiHarian belum dibuat.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Pegawai.php](../img/after/pert4/pegawaiphp.png)
 
 *Semua TODO terisi, termasuk kelas `Dosen` dan `PegawaiHarian`.*
@@ -111,22 +123,26 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Galat logika)*:
+
 ![SS Before main.php](../img/befor/pert4/mainphp.png)
 
 *Kondisi awal: baru dua pegawai di daftar dan TODO untuk menambah Dosen serta PegawaiHarian.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After main.php](../img/after/pert4/mainphp.png)
 
 *Daftar sudah memuat empat jenis pegawai.*
 
 ### Output
 **Output Program:**
+
 ![Output PHP](../img/after/pert4/outputphp.png)
 
 *Setelah dilengkapi, Ani Rp7.800.000,00, Budi Rp5.000.000,00, Citra (Dosen) Rp9.240.000,00, Dedi (Harian) Rp4.400.000,00, dan total beban gaji Rp26.440.000,00.*
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output PHP sebelum](../img/befor/pert4/outputphp.png)
 
 *Sebelum dilengkapi, gaji semua pegawai Rp0,00 dan total Rp0,00.*

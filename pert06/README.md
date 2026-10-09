@@ -20,11 +20,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Movable.java](../img/befor/pert6/movablejava.png)
 
 *Kondisi awal: `ringkasanGerak()` masih TODO sehingga output menampilkan "TODO 1 belum dikerjakan".*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Movable.java](../img/after/pert6/movablejava.png)
 
 *Default method sudah menghasilkan teks "Kecepatan maksimum ... km/jam".*
@@ -42,11 +44,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Kendaraan.java](../img/befor/pert6/kendaraanjava.png)
 
 *Kondisi awal: `umur()` masih TODO.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Kendaraan.java](../img/after/pert6/kendaraanjava.png)
 
 *`umur()` sudah dilengkapi dengan batas minimal 0.*
@@ -57,11 +61,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Mobil.java](../img/befor/pert6/mobiljava.png)
 
 *Kondisi awal: method `Movable` dan `Fuelable` masih TODO.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Mobil.java](../img/after/pert6/mobiljava.png)
 
 *Kontrak `Movable` dan `Fuelable` sudah dipenuhi, lengkap dengan validasi pengisian.*
@@ -75,6 +81,7 @@
 *Belum ada. File ini dibuat baru pada langkah praktikum, jadi tidak ada kondisi awal.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Sepeda.java](../img/after/pert6/sepedajava.png)
 
 ### 1.6. File: `TipeBahanBakar.java`
@@ -83,11 +90,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before TipeBahanBakar.java](../img/befor/pert6/tipebahanbakarjava.png)
 
 *Kondisi awal: konstanta enum, `biayaPengisian()`, dan `ramahLingkungan()` masih TODO.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After TipeBahanBakar.java](../img/after/pert6/tipebahanbakarjava.png)
 
 *Tiga konstanta dan dua method perilaku sudah dilengkapi.*
@@ -98,22 +107,26 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Main.java](../img/befor/pert6/mainjava.png)
 
 *Kondisi awal: Sepeda belum ada di daftar `Movable`.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Main.java](../img/after/pert6/mainjava.png)
 
 *Sepeda sudah ada di daftar, dan `isiPenuh()` hanya dipanggil untuk `mobil`.*
 
 ### Output
 **Output Program:**
+
 ![Output Java](../img/after/pert6/outputjava.png)
 
 *Setelah dilengkapi, Mobil dan Sepeda bergerak dengan kecepatan maksimum 180,0 dan 30,0 km/jam, pengisian penuh Bensin 45 satuan berbiaya Rp540.000, dan enum menampilkan Listrik sebagai satu-satunya yang ramah lingkungan.*
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output Java sebelum](../img/befor/pert6/outputjava.png)
 
 *Sebelum dilengkapi, ringkasan gerak menampilkan "TODO 1 belum dikerjakan", biaya Rp0, dan enum `LISTRIK` belum ada.*
@@ -129,6 +142,7 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Galat logika)*:
+
 ![SS Before abstraksi.php (1)](../img/befor/pert6/abstraksiphp1.png)
 ![SS Before abstraksi.php (2)](../img/befor/pert6/abstraksiphp2.png)
 ![SS Before abstraksi.php (3)](../img/befor/pert6/abstraksiphp3.png)
@@ -136,6 +150,7 @@
 *Kondisi awal (tiga potongan screenshot karena file panjang): kerangka dengan banyak TODO pada enum, trait, `umur()`, `Mobil`, dan `Sepeda`/`Pesanan` yang belum dibuat.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After abstraksi.php](../img/after/pert6/abstraksiphp.png)
 
 *Seluruh TODO sudah dilengkapi: enum, trait, kelas `Mobil`, `Sepeda`, dan `pesanan`.*
@@ -146,22 +161,26 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Galat logika)*:
+
 ![SS Before main.php](../img/befor/pert6/mainphp.png)
 
 *Kondisi awal: Sepeda belum ada dan sebagian TODO belum dijalankan.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After main.php](../img/after/pert6/mainphp.png)
 
 *Sepeda sudah masuk daftar `Movable`, dan trait dipakai oleh dua kelas yang tidak sekerabat.*
 
 ### Output
 **Output Program:**
+
 ![Output PHP](../img/after/pert6/outputphp.png)
 
 *Setelah dilengkapi, Mobil bergerak dengan kecepatan 180 km/jam dan Sepeda 40 km/jam, pengisian penuh Bensin berbiaya Rp540.000, enum menampilkan tiga tipe bahan bakar dengan Listrik sebagai yang ramah lingkungan, dan trait mencetak log dari `Mobil` dan `pesanan`.*
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output PHP sebelum](../img/befor/pert6/outputphp.png)
 
 *Sebelum dilengkapi, kecepatan maksimum 0 km/jam, label enum menampilkan "?", dan biaya Rp0.*

@@ -21,11 +21,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Mahasiswa.java](../img/befor/pert2/mahasiswajava.png)
 
 *Kondisi awal berupa kerangka dengan banyak TODO. `nilaiAkhir()` masih `return 0` dan `hurufMutu()` masih `return "?"`, serta belum ada validasi.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Mahasiswa.java](../img/after/pert2/mahasiswajava.png)
 
 *Seluruh TODO sudah dilengkapi: atribut `final`, validasi di constructor, method `pastikanNilaiSah()`, perhitungan nilai akhir, dan huruf mutu.*
@@ -33,11 +35,13 @@
 
 ### Output
 **Output Program:**
+
 ![Output Java](../img/after/pert2/outputjava.png)
 
  
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output Java sebelum](../img/befor/pert2/outputjava.png)
 
  
@@ -53,11 +57,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Galat logika)*:
+
 ![SS Before Mahasiswa.php](../img/befor/pert2/mahasiswaphp.png)
 
 *Kondisi awal masih kerangka TODO: perhitungan nilai akhir dan huruf mutu belum diisi, validasi belum ada.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Mahasiswa.php](../img/after/pert2/mahasiswaphp.png)
 
 *Validasi, `nilaiAkhir()`, dan `hurufMutu()` dengan `match` sudah lengkap.*
@@ -66,11 +72,13 @@
 
 ### Output
 **Output Program:**
+
 ![Output PHP](../img/after/pert2/outputphp.png)
 
 *Setelah dilengkapi, hasil sama dengan versi Java: nilai akhir dan mutu benar, nilai 150 dan NIM kosong ditolak.*
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output PHP sebelum](../img/befor/pert2/outputphp.png)
 
 *Sebelum dilengkapi, nilai akhir 0.00 dan mutu "?" untuk semua mahasiswa, serta data tidak sah masih lolos.*

@@ -23,11 +23,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before RekeningBank.java](../img/befor/pert3/rekeningbankjava.png)
 
 *Kondisi awal berupa kerangka TODO: konstanta belum ada, penghitung belum dideklarasikan, dan method masih placeholder. Output awal menunjukkan jumlah rekening -1 dan bunga Rp0.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After RekeningBank.java](../img/after/pert3/rekeningbankjava.png)
 
 *Semua TODO sudah dikerjakan: konstanta, field statis, constructor berdelegasi, validasi, dan method statis.*
@@ -41,11 +43,13 @@
 
 ### Output
 **Output Program:**
+
 ![Output Java](../img/after/pert3/outputjava.png)
 
 *Setelah dilengkapi, jumlah rekening awal 0 dan menjadi 3, saldo Ani menjadi Rp1.500.000,00 setelah setor, penarikan berlebih ditolak, dan saldo Budi tetap Rp0,00 setelah potong admin.*
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output Java sebelum](../img/befor/pert3/outputjava.png)
 
 *Sebelum dilengkapi, jumlah rekening bernilai -1, saldo tidak bertambah setelah setor, penarikan berlebih tidak ditolak, dan bunga Rp0,00.*
@@ -62,11 +66,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Galat logika)*:
+
 ![SS Before RekeningBank.php](../img/befor/pert3/rekeningbankphp.png)
 
 *Kondisi awal berupa kerangka TODO. Output awal menampilkan Fatal error "TODO 5 belum dikerjakan" karena `rekeningPelajar()` belum diimplementasikan.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After RekeningBank.php](../img/after/pert3/rekeningbankphp.png)
 
 *Named constructor, validasi, penghitung statis, dan method statis sudah lengkap sehingga program berjalan sampai selesai.*
@@ -80,11 +86,13 @@
 
 ### Output
 **Output Program:**
+
 ![Output PHP](../img/after/pert3/outputphp.png)
 
 *Setelah dilengkapi, program berjalan penuh: jumlah rekening 0 lalu 3, saldo Ani Rp1.500.000,00 setelah setor, penarikan berlebih ditolak, dan bunga setahun Rp37.500,00.*
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output PHP sebelum](../img/befor/pert3/outputphp.png)
 
 *Sebelum dilengkapi, program berhenti dengan Fatal error "TODO 5 belum dikerjakan" pada `rekeningPelajar()` dan jumlah rekening awal bernilai -1.*

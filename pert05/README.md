@@ -25,11 +25,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Lingkaran.java](../img/befor/pert5/lingkaranjava.png)
 
 *Kondisi awal: validasi belum ada dan `luas()` serta `keliling()` masih TODO.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Lingkaran.java](../img/after/pert5/lingkaranjava.png)
 
 *Validasi dan rumus luas serta keliling sudah dilengkapi.*
@@ -40,11 +42,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Persegi.java](../img/befor/pert5/persegijava.png)
 
 *Kondisi awal: validasi dan rumus masih TODO sehingga luas dan keliling tercetak 0,00.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Persegi.java](../img/after/pert5/persegijava.png)
 
 *Validasi dan rumus sudah dilengkapi.*
@@ -54,7 +58,7 @@
 > Bangun datar baru yang ditambahkan pada langkah 2 tanpa mengubah logika perulangan di `Main`. Menyimpan `alas`, `tinggi`, dan `sisiMiring`. `luas()` memakai `0.5 * alas * tinggi` dan `keliling()` menjumlahkan ketiga sisi. `toString()` di-override untuk menampilkan ukuran segitiga.
 
 **Bukti Eksekusi (Screenshot):**
-* File ini dibuat baru sehingga tidak ada kondisi before. Hasilnya terlihat pada bagian 
+* File ini dibuat baru sehingga tidak ada kondisi before. 
 
 ![SS After segitiga.java](../img/after/pert5/segitigajava.png)
 
@@ -63,7 +67,8 @@
 > Bangun datar keempat yang ditambahkan pada langkah 4. Menyimpan sisi atas, sisi bawah, tinggi, sisi kiri, dan sisi kanan. `luas()` memakai `0.5 * (atas + bawah) * tinggi` dan `keliling()` menjumlahkan keempat sisi. Seperti `Segitiga`, class ini cukup ditambahkan ke array di `Main` tanpa mengubah kode lain.
 
 **Bukti Eksekusi (Screenshot):**
-* File ini dibuat baru sehingga tidak ada kondisi before. Hasilnya terlihat pada bagian 
+* File ini dibuat baru sehingga tidak ada kondisi before.
+
 ![SS After trapesium.java](../img/after/pert5/trapesiumjava.png)
 
 ### 1.6. File: `Main.java`
@@ -72,11 +77,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Kesalahan kompilasi)*:
+
 ![SS Before Main.java](../img/befor/pert5/mainjava.png)
 
 *Kondisi awal: array baru berisi Lingkaran dan Persegi, dan Segitiga serta Trapesium masih TODO.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After Main.java](../img/after/pert5/mainjava.png)
 
 *Array sudah memuat empat bangun datar.*
@@ -88,11 +95,13 @@
 
 ### Output
 **Output Program:**
+
 ![Output Java](../img/after/pert5/outputjava.png)
 
 *Setelah dilengkapi, Lingkaran luas 153,94, Persegi 25,00, Segitiga 6,0, Trapesium 40,0, dan total luas 224,94. Bagian downcasting menampilkan jari-jari Lingkaran 7,0.*
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output Java sebelum](../img/befor/pert5/outputjava.png)
 
 *Sebelum dilengkapi, luas dan keliling Lingkaran dan Persegi tercetak 0,00 dan total luas 0,00.*
@@ -108,11 +117,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Galat logika)*:
+
 ![SS Before BangunDatar.php](../img/befor/pert5/bangundatarphp.png)
 
 *Kondisi awal: hanya kerangka dengan TODO, belum ada validasi, rumus, maupun kelas Segitiga dan Trapesium.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After BangunDatar.php](../img/after/pert5/bangundatarphp.png)
 
 *Seluruh kelas turunan sudah dibuat dan dilengkapi.*
@@ -123,11 +134,13 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Galat logika)*:
+
 ![SS Before main.php](../img/befor/pert5/mainphp.png)
 
 *Kondisi awal: array baru berisi dua bangun, dan Segitiga serta Trapesium masih TODO.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After main.php](../img/after/pert5/mainphp.png)
 
 *Array sudah memuat empat bangun datar.*
@@ -138,22 +151,26 @@
 
 **Bukti Eksekusi (Screenshot):**
 * **Before** *(Kondisi awal / Galat logika)*:
+
 ![SS Before notifikasi.php](../img/befor/pert5/notifikasiphp.png)
 
 *Kondisi awal: hanya TODO yang menjelaskan hierarki yang harus dibuat.*
 
 * **After** *(Kondisi akhir / Eksekusi berhasil)*:
+
 ![SS After notifikasi.php](../img/after/pert5/notifikasiphp.png)
 
 *Hierarki Notifikasi dan fungsi `kirimSemua()` sudah lengkap.*
 
 ### Output
 **Output Program:**
+
 ![Output PHP](../img/after/pert5/outputphp.png)
 
 
 
 **Pembanding, output sebelum kode dilengkapi:**
+
 ![Output PHP sebelum](../img/befor/pert5/outputphp.png)
 
 
