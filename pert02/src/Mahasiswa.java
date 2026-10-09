@@ -20,8 +20,8 @@ public class Mahasiswa {
     private static final double NILAI_MIN = 0;
     private static final double NILAI_MAX = 100;
 
-    // TODO 1: deklarasikan atribut. Perhatikan mana yang boleh berubah
-    //         dan mana yang tidak. Gunakan final untuk yang tidak boleh berubah.
+    // Atribut: nim dan nama tidak boleh berubah setelah terdaftar -> final.
+    // Nilai boleh berubah (mis. saat input ulang), jadi bukan final.
     private final String nim;
     private final String nama;
     private double nilaiTugas;
@@ -29,13 +29,15 @@ public class Mahasiswa {
     private double nilaiUas;
 
     public Mahasiswa(String nim, String nama, double nilaiTugas, double nilaiUts, double nilaiUas) {
-        // TODO 2: tolak NIM yang kosong atau null.
-        //         Lemparkan IllegalArgumentException dengan pesan yang menyebut
-        //         APA yang salah — bukan sekadar "Error".
+        // Tolak NIM yang kosong atau null.
+        if (nim == null || nim.isBlank()) {
+            throw new IllegalArgumentException("NIM tidak boleh kosong atau null");
+        }
 
-        // TODO 3: tolak setiap komponen nilai yang di luar rentang 0-100.
-        //         Petunjuk: buat satu method privat pembantu agar tidak menulis
-        //         pemeriksaan yang sama tiga kali.
+        // Tolak setiap komponen nilai yang di luar rentang 0-100.
+        pastikanNilaiSah("tugas", nilaiTugas);
+        pastikanNilaiSah("UTS", nilaiUts);
+        pastikanNilaiSah("UAS", nilaiUas);
 
         this.nim = nim;
         this.nama = nama;
@@ -44,29 +46,39 @@ public class Mahasiswa {
         this.nilaiUas = nilaiUas;
     }
 
-    // TODO 4: buat method privat pembantu untuk memvalidasi satu komponen nilai.
-    //         Tanda tangan yang disarankan:
-    //         private static void pastikanNilaiSah(String namaKomponen, double nilai)
-
-
-    /**
-     * TODO 5: hitung nilai akhir memakai konstanta bobot di atas.
-     */
-    public double nilaiAkhir() {
-        return 0;   // ganti
+    // Method privat pembantu untuk memvalidasi satu komponen nilai.
+    private static void pastikanNilaiSah(String namaKomponen, double nilai) {
+        if (nilai < NILAI_MIN || nilai > NILAI_MAX) {
+            throw new IllegalArgumentException(
+                "Nilai " + namaKomponen + " harus di rentang " + NILAI_MIN + "-" + NILAI_MAX
+                + ", diberikan: " + nilai);
+        }
     }
 
     /**
-     * TODO 6: kembalikan huruf mutu berdasarkan nilai akhir.
+     * Hitung nilai akhir memakai konstanta bobot di atas.
+     */
+    public double nilaiAkhir() {
+        return (nilaiTugas * BOBOT_TUGAS) + (nilaiUts * BOBOT_UTS) + (nilaiUas * BOBOT_UAS);
+    }
+
+    /**
+     * Kembalikan huruf mutu berdasarkan nilai akhir.
      *   >= 80 -> "A"   >= 70 -> "B"   >= 60 -> "C"   >= 50 -> "D"   selain itu "E"
      */
     public String hurufMutu() {
-        return "?";   // ganti
+        double akhir = nilaiAkhir();
+        if (akhir >= 80) return "A";
+        if (akhir >= 70) return "B";
+        if (akhir >= 60) return "C";
+        if (akhir >= 50) return "D";
+        return "E";
     }
 
     // ── Getter ────────────────────────────────────────────────
-    // TODO 7: sediakan getter untuk nim, nama, dan nilaiAkhir.
-    //         JANGAN membuat setNim(). Baca ulang invariant Anda kalau tergoda.
+    // Getter untuk nim dan nama sudah ada.
+    // "Getter" untuk nilaiAkhir cukup lewat method nilaiAkhir() itu sendiri
+    // (tidak perlu getter tambahan / setNim tidak dibuat agar NIM tetap immutable).
 
     public String getNim()  { return nim; }
     public String getNama() { return nama; }
