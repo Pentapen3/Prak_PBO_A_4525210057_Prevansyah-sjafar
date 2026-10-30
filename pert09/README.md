@@ -7,7 +7,7 @@
 | **Kelas** | A |
 | **Mata Kuliah** | Pemrograman Berbasis Objek (PBO) |
 | **Pertemuan** | 09 — Package, Namespace, dan Build Tool |
-| **Tanggal** | *Kamis, 28 Oktober 2026* |
+| **Tanggal** | *Kamis, 29 Oktober 2026* |
 | **Dosen Pengampu** | *Adi Wahyu Pribadi, S.Si., M.Kom* |
 
 ---
