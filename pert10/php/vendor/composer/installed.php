@@ -3,7 +3,7 @@
         'name' => 'univpancasila/perpustakaan',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b3cf4293c8746b83b919108382d87babab9e75fc',
+        'reference' => 'ce63156bcd0bb13232d65969856535dd2bb9c466',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -97,7 +97,7 @@
         'univpancasila/perpustakaan' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b3cf4293c8746b83b919108382d87babab9e75fc',
+            'reference' => 'ce63156bcd0bb13232d65969856535dd2bb9c466',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
