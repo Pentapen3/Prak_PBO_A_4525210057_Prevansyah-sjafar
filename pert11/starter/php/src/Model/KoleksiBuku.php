@@ -33,13 +33,13 @@ final class KoleksiBuku implements IteratorAggregate, Countable
         }
     }
 
-    /** TODO 1: simpan buku dengan kunci ISBN-nya. */
+    /** Simpan buku dengan kunci ISBN-nya. ISBN yang sama menimpa buku lama. */
     public function simpan(Buku $b): void
     {
-        $this->items[$b->isbn] = $b;
+        $this->items[$b->getNomorInduk()] = $b;
     }
 
-    /** TODO 2: kembalikan Buku atau null. Perhatikan tipe kembaliannya: ?Buku */
+    /** Kembalikan Buku atau null. Perhatikan tipe kembaliannya: ?Buku */
     public function cariByIsbn(string $isbn): ?Buku
     {
         return $this->items[$isbn] ?? null;
@@ -49,9 +49,9 @@ final class KoleksiBuku implements IteratorAggregate, Countable
     public function semua(): array { return array_values($this->items); }
 
     /**
-     * TODO 3: kembalikan KoleksiBuku baru berisi item yang lolos predikat.
-     *         PERHATIAN: array_filter(array, callable) — array DULU.
-     *         Jangan lupa array_values agar indeksnya tidak berlubang.
+     * Kembalikan KoleksiBuku baru berisi item yang lolos predikat.
+     * PERHATIAN: array_filter(array, callable) — array DULU.
+     * array_values dipakai agar indeksnya tidak berlubang.
      */
     public function filter(callable $predikat): self
     {
@@ -59,10 +59,10 @@ final class KoleksiBuku implements IteratorAggregate, Countable
     }
 
     /**
-     * TODO 4: kembalikan larik hasil pemetaan.
-     *         PERHATIAN: array_map(callable, array) — callable DULU.
-     *         Urutan argumennya BERBEDA dari array_filter. Ini sumber
-     *         kesalahan yang sangat sering terjadi.
+     * Kembalikan larik hasil pemetaan.
+     * PERHATIAN: array_map(callable, array) — callable DULU.
+     * Urutan argumennya BERBEDA dari array_filter. Ini sumber
+     * kesalahan yang sangat sering terjadi.
      *
      * @return mixed[]
      */
@@ -71,14 +71,18 @@ final class KoleksiBuku implements IteratorAggregate, Countable
         return array_map($f, array_values($this->items));
     }
 
-    /** TODO 5: jumlahkan hasil $f atas seluruh item. Petunjuk: array_reduce */
+    /** Jumlahkan hasil $f atas seluruh item. */
     public function jumlahkan(callable $f): float
     {
-        return (float) array_reduce($this->items, fn (float $t, Buku $b): float => $t + $f($b), 0.0);
+        return array_reduce(
+            $this->items,
+            fn (float $total, Buku $b): float => $total + $f($b),
+            0.0
+        );
     }
 
     /**
-     * TODO 6: kelompokkan item berdasarkan kunci hasil $kunci($buku).
+     * Kelompokkan item berdasarkan kunci hasil $kunci($buku).
      * @return array<string,Buku[]>
      */
     public function kelompokkan(callable $kunci): array

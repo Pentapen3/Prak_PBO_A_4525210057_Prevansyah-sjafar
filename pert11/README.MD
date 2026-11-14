@@ -43,16 +43,22 @@ Keempat method sudah terisi implementasinya.
 
 **Penjelasan kode:**
 
-Unit test pertama untuk `Repository`. `@BeforeEach` membuat `Repository` baru sebelum setiap uji sehingga antar-uji tidak saling memengaruhi. Uji yang ada:
+Unit test pertama untuk `Repository`, dengan total **11 uji**. `@BeforeEach` membuat `Repository` baru sebelum setiap uji sehingga antar-uji tidak saling memengaruhi. Lima uji utama (TODO 1–5):
 
 - item yang disimpan dapat ditemukan kembali,
 - id yang tidak ada mengembalikan `Optional` kosong,
 - item yang dihapus tidak ditemukan lagi,
 - repository baru berisi nol item,
-- `cariSemua()` tidak bisa diubah dari luar (`UnsupportedOperationException`),
+- `cariSemua()` tidak bisa diubah dari luar (`UnsupportedOperationException`).
+
+Enam uji tambahan:
+
 - kunci sama menimpa item lama,
 - menghapus id yang tidak ada mengembalikan `false`,
-- urutan penyimpanan terjaga.
+- peminjaman yang sah mengurangi stok satu eksemplar,
+- `pinjam()` melempar `BukuTidakDitemukanException` untuk ISBN tak terdaftar,
+- `pinjam()` melempar `BatasPinjamTerlampauiException` setelah tiga pinjaman,
+- `pinjam()` melempar `BukuSedangDipinjamException` bila stok habis.
 
 **Screenshot sebelum:**
 
@@ -62,9 +68,23 @@ Method uji `TODO 1–5` masih kosong, belum ada `assert`.
 
 **Screenshot sesudah:**
 
-Semua uji sudah berisi `assertTrue`, `assertEquals`, `assertFalse`, dan `assertThrows`, ditambah tiga uji tambahan.
+Semua uji sudah berisi `assertTrue`, `assertEquals`, `assertFalse`, dan `assertThrows`, ditambah enam uji tambahan.
 
 ![RepositoryTest.java sesudah](../img/after/pert11/RepositoryTest.java.png)
+
+### Output Java
+
+Program dijalankan dengan `mvn exec:java`. Output memperlihatkan menu utama, lalu form tambah buku dengan ISBN `4525210057`, judul `Prevansyah sjafar`, dan 3 eksemplar. Program menampilkan pesan `BERHASIL`, kembali ke menu, lalu keluar (pilihan `0`) dan mengekspor daftar buku ke `laporan_buku.txt`.
+
+![Output Java](../img/after/pert11/outputjava.png)
+
+**Hasil pengujian (`mvn test`):**
+
+Laporan Surefire (`target/surefire-reports`) mencatat semua uji `RepositoryTest` lulus:
+
+```text
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+```
 
 ---
 
@@ -101,7 +121,25 @@ Semua method sudah terisi implementasinya.
 
 **Penjelasan kode:**
 
-Unit test PHPUnit untuk `KoleksiBuku`. `setUp()` membuat koleksi baru sebelum setiap uji. Uji yang ada: item dapat ditemukan kembali, ISBN tak ada mengembalikan `null`, koleksi baru berisi nol item, `filter`, `jumlahkan`, `semua()` berindeks urut, ISBN sama menimpa item lama, `filter` tidak meninggalkan indeks berlubang, `kelompokkan` berdasarkan penulis, dan iterasi dengan `foreach`.
+Unit test PHPUnit untuk `KoleksiBuku`, dengan total **12 uji**. `setUp()` membuat koleksi baru sebelum setiap uji, dan `isiTigaBuku()` mengisi tiga buku (stok 2, 0, dan 1) sebagai data uji bersama. Lima uji utama (TODO 1–5):
+
+- item yang disimpan dapat ditemukan kembali,
+- ISBN tak ada mengembalikan `null`,
+- koleksi baru berisi nol item (`count()` bekerja karena `Countable`),
+- `filter` hanya mengembalikan buku yang lolos predikat,
+- `jumlahkan` menghitung total dengan benar.
+
+Tujuh uji tambahan:
+
+- ISBN sama menimpa buku lama,
+- `filter` mengembalikan indeks berurutan (tidak berlubang),
+- `map` mengembalikan daftar judul,
+- `kelompokkan` berdasarkan penulis,
+- `pinjam()` melempar `BukuTidakDitemukanException` untuk ISBN tak terdaftar,
+- `pinjam()` melempar `BatasPinjamTerlampauiException` setelah tiga pinjaman,
+- `pinjam()` melempar `BukuSedangDipinjamException` bila stok habis.
+
+Pengujian dijalankan dengan `./vendor/bin/phpunit tests`.
 
 **Screenshot sebelum:**
 
@@ -111,10 +149,16 @@ Method uji `TODO 1–5` masih kosong, belum ada `assert`.
 
 **Screenshot sesudah:**
 
-Semua uji sudah berisi `assertSame`, `assertNull`, dan `assertCount`, ditambah uji tambahan.
+Semua uji sudah berisi `assertSame`, `assertNull`, `assertCount`, dan `expectException`, ditambah tujuh uji tambahan.
 
 ![KoleksiBukuTest.php sesudah](../img/after/pert11/KoleksiBukuTest.php.png)
 
 ---
 
+### Output PHP
 
+Program dijalankan dengan `php main.php`. Output terdiri dari tiga bagian: daftar koleksi buku (kode, judul, penulis, stok, jumlah bab), daftar transaksi peminjaman (`PJ-001` sudah kembali, `PJ-002` masih dipinjam), dan simulasi denda keterlambatan `PJ-001` sebesar Rp5.000,00 untuk keterlambatan 5 hari.
+
+![Output PHP](../img/after/pert11/outputphp.png)
+
+---

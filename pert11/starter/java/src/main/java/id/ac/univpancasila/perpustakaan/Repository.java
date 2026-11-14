@@ -30,30 +30,28 @@ public class Repository<T> {
         this.pengambilKunci = pengambilKunci;
     }
 
-    /** TODO 1: simpan item, dengan kunci diambil lewat pengambilKunci. */
+    /** Simpan item, dengan kunci diambil lewat pengambilKunci. Kunci yang sama menimpa item lama. */
     public void simpan(T item) {
         data.put(pengambilKunci.apply(item), item);
     }
 
     /**
-     * TODO 2: kembalikan Optional yang berisi item bila ada, kosong bila tidak.
-     *         JANGAN mengembalikan null.
-     *         Petunjuk: Optional.ofNullable(...)
+     * Kembalikan Optional yang berisi item bila ada, kosong bila tidak.
+     * Tidak pernah mengembalikan null.
      */
     public Optional<T> cariById(String id) {
         return Optional.ofNullable(data.get(id));
     }
 
     /**
-     * TODO 3: kembalikan SALINAN TAK-BERUBAH dari seluruh isi.
-     *         Pelajaran sesi 7 tetap berlaku: koleksi internal tidak boleh bocor.
-     *         Petunjuk: List.copyOf(...)
+     * Kembalikan SALINAN TAK-BERUBAH dari seluruh isi.
+     * Pelajaran sesi 7 tetap berlaku: koleksi internal tidak boleh bocor.
      */
     public List<T> cariSemua() {
         return List.copyOf(data.values());
     }
 
-    /** TODO 4: hapus item; kembalikan true bila ada yang terhapus. */
+    /** Hapus item; kembalikan true bila ada yang terhapus. */
     public boolean hapus(String id) {
         return data.remove(id) != null;
     }
